@@ -1,0 +1,1 @@
+(function(){directivesModule.directive("autoFillableField",["$timeout",function($timeout){return{require:"^ngModel",restrict:"A",link:function(scope,element,attrs,ngModel){return $timeout(function(){return ngModel.$viewValue!==element.val()&&""!==element.val()?ngModel.$setViewValue(element.val()):void 0},500)}}}])}).call(this);

@@ -1,0 +1,17 @@
+processResources.dependsOn(coffee)
+
+jar {
+    from(fileTree(webjarconfig.compiledAssets)) {
+        into webjarconfig.baseDir + webjarconfig.subDir
+    }
+    outputs.file archivePath
+}
+
+test.dependsOn(karma)
+
+clean.dependsOn(cleanCoffee)
+
+dependencies {
+    compile project(':angular-common-web')
+    compile project(':angular-i18n-web')
+}

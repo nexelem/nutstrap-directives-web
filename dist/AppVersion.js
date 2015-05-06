@@ -1,0 +1,1 @@
+(function(){directivesModule.directive("appVersion",function(){return{restrict:"E",scope:{bversion:"=version",bdate:"=date"},template:'<p>Version: {{bversion}} <span class="text-muted">({{bdate}})</span></p>'}})}).call(this);

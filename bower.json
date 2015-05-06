@@ -1,0 +1,23 @@
+{
+  "name": "directives-web",
+  "version": "0.2",
+  "homepage": "https://github.com/nexelem/angular-auth-web",
+  "main": [
+        "./dist/directives-module.min.js"],
+  "authors": [
+    "Nexelem <office@nexelem.com>"
+  ],
+  "description": "Angular authentication support",
+  "keywords": [
+    "angular",
+    "authentication"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
