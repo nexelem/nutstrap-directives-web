@@ -23,15 +23,7 @@ and add the module into angular
 
 finally you can add the js to your html, (index.html)
 
-```
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("AppVersion.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("HasError.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("ErrorSpan.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("IsRequired.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("CurrencyInPence.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("CharacterCount.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("PasswordValidate.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("ValidJson.js"))' type="text/javascript"></script>
-<script src='@routes.WebJarAssets.at(WebJarAssets.locate("AutoFillableField.js"))' type="text/javascript"></script>
-```
+To compile coffeescript, copy files to dist and concat into one use respectively grunt tasks: coffee, copy and uglify.
+grunt dist runs all those tasks.
+Complete, minified js file can be found in dist/directives-module.min.js
 
