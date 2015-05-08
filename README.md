@@ -1,4 +1,4 @@
-### angular-directives-web
+### nutstrap-directives-web
 
 This module contains AngularJS *directives* for a variety of ui functionality.
 
