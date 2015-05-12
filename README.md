@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nexelem/nutstrap-directives-web.svg?branch=feature%2Ftravis)](https://travis-ci.org/nexelem/nutstrap-directives-web)
+
 ### nutstrap-directives-web
 
 This module contains AngularJS *directives* for a variety of ui functionality.
