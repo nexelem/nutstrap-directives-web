@@ -1,1 +1,39 @@
-(function(){directivesModule.directive("characterCount",function($log,$filter){return{restrict:"E",replace:!0,scope:!0,template:"<sub>{{remainingCount}} {{message}}</sub>",link:function(scope,element,attrs){return attrs.count||$log.error("No length attribute specified"),attrs.field||$log.error("No field attribute specified"),scope.$watch(attrs.field,function(newValue,oldValue){return void 0===newValue?(scope.remainingCount="",scope.message=""):""===newValue&&oldValue?(scope.remainingCount=attrs.count,scope.message="characters left"):newValue?(scope.remainingCount=newValue.length>=attrs.count?0:attrs.count-newValue.length,scope.message=(attrs.count-newValue.length===1?"character":"characters")+" left"):(scope.remainingCount="",scope.message="")})}}})}).call(this);
+
+/*
+ Shows a simple count of remaing characters
+ */
+
+(function() {
+  directivesModule.directive('characterCount', function($log, $filter) {
+    return {
+      restrict: 'E',
+      replace: true,
+      scope: true,
+      template: '<sub>{{remainingCount}} {{message}}</sub>',
+      link: function(scope, element, attrs) {
+        if (!attrs.count) {
+          $log.error("No length attribute specified");
+        }
+        if (!attrs.field) {
+          $log.error("No field attribute specified");
+        }
+        return scope.$watch(attrs.field, function(newValue, oldValue) {
+          if (newValue === void 0) {
+            scope.remainingCount = "";
+            return scope.message = "";
+          } else if (newValue === "" && oldValue) {
+            scope.remainingCount = attrs.count;
+            return scope.message = "characters left";
+          } else if (newValue) {
+            scope.remainingCount = newValue.length >= attrs.count ? 0 : attrs.count - newValue.length;
+            return scope.message = ((attrs.count - newValue.length) === 1 ? 'character' : 'characters') + " left";
+          } else {
+            scope.remainingCount = "";
+            return scope.message = "";
+          }
+        });
+      }
+    };
+  });
+
+}).call(this);
