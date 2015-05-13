@@ -2,3 +2,4 @@ angular-directives-web.iml
 target
 build
 node_modules
+.idea
